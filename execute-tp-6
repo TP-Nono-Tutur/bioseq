@@ -22,7 +22,7 @@ echo "------------------------------"
 echo "calcul du tableau des suffixe homo sapiens 14"
 echo "$(./bioseq.native suffix-array-10 homo_sapiens_14.fasta)"
 
-echo "calcul de la bwt de la bacterie thermophilus"
+echo "calcul de la bwt de homo sapiens 14"
 echo "$(./bioseq.native bwt-10 homo_sapiens_14.fasta)"
 
 

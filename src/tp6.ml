@@ -1,6 +1,8 @@
 let ten_suffix_array seq_file =
   let seq = Fasta.extract_first_seq (Fasta.of_file seq_file) in
+  Printf.printf "séquence chargé\n";
   let i_array = Sequence.extract_suffix_array seq in
+  Printf.printf "suffix array généré\n";
   for i = 0 to 9 do
     Printf.printf"%d " i_array.(i)
   done
