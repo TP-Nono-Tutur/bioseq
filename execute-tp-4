@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#Compilation
+make
+
+################# PARTIE 1 ###################
+# Question 1
+echo "Question 1 ==================="
+
+function search_fasta_naive(){
+    string=$1
+    echo "recherche de $string dans phage-lambda.fasta"
+    echo "$(./bioseq.native search-fasta-naive  phage-lambda.fasta $string)"
+}
+search_fasta_naive "GGCCATCCTTCCTGACCATTTCCATCATTCCAGTCGAACT"
+echo "------------------"
+search_fasta_naive "ATAGTG"
+
+echo "Question 2 ==================="
+
+function suffix_array(){
+    file=$1
+    echo "tableau des suffixe de $file"
+    echo "$(./bioseq.native suffix-array-naive $file)"
+}
+suffix_array test.fasta 
+echo "------------------"
+echo "la sortie de la fonction ./bioseq.native suffix-array phage-lambda.fasta est renvoyé dans le fichier result_2.txt"
+suffix_array phage-lambda.fasta > result_2.txt
+
+echo "Question 3 ==================="
+
+chaine="ATAGTG"
+
+
+echo "recherche de la chaine \"$chaine\" dans le fichier phage-lambda.fasta"
+
+echo "$(./bioseq.native search-fasta-sa phage-lambda.fasta $chaine )"

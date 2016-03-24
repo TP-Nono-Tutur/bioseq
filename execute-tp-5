@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Compilation
+make
+
+################# PARTIE 1 ###################
+# Question 1
+echo "Question 1 ==================="
+echo ">test" > test.fasta
+echo "GGCCATCCTTCCTGACCATTTCCATCATTCCAGTCGAACT" >> test.fasta
+
+echo "calcul de la bwt de la chaine GGCCATCCTTCCTGACCATTTCCATCATTCCAGTCGAACT : "
+echo "$(./bioseq.native bwt-naive test.fasta)"
+echo "------------------"
+echo "calcul de la bwt du virus ebola : le resultat et le temps d'éxecution sont stockés dans le fichier result1.txt"
+echo "$(./bioseq.native bwt ebola-t.fasta)" > result1.txt
+
+# Question 2
+echo "Question 2 ==================="
+echo "application de unbwt à bwt(GGCCATCCTTCCTGACCATTTCCATCATTCCAGTCGAACT)"
+echo "$(./bioseq.native bwt-naive test.fasta)" | head -n 1 > test.bwt
+echo "$(./bioseq.native unbwt test.bwt)"
+echo "------------------"
+echo "application de unbwt à bwt(ebola-t.fasta) : le resultat et le temps d'éxecution sont stockés dans le fichier result2.txt"
+echo "$(./bioseq.native bwt-naive ebola-t.fasta)" | head -n 1 > ebola-t.bwt
+echo "$(./bioseq.native unbwt ebola-t.bwt)" > result2.txt
