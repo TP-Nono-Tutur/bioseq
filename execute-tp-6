@@ -6,11 +6,11 @@ make
 ################# PARTIE 1 ###################
 # Question 1
 # echo "Question 1 ==================="
-# echo "calcul du tableau des suffixe du virus lambda phage"
-# echo "$(./bioseq.native suffix-array-10 phage-lambda.fasta)"
+echo "calcul du tableau des suffixe du virus lambda phage"
+echo "$(./bioseq.native suffix-array-10 phage-lambda.fasta)"
 
-# echo "calcul de la bwt du virus lambda phage"
-# echo "$(./bioseq.native bwt-10 phage-lambda.fasta)"
+echo "calcul de la bwt du virus lambda phage"
+echo "$(./bioseq.native bwt-10 phage-lambda.fasta)"
 # echo "------------------------------"
 # echo "calcul du tableau des suffixe de la bacterie thermophilus"
 # echo "$(./bioseq.native suffix-array-10 thermophilus.fasta)"
@@ -18,11 +18,11 @@ make
 # echo "calcul de la bwt de la bacterie thermophilus"
 # echo "$(./bioseq.native bwt-10 thermophilus.fasta)"
 
-echo "------------------------------"
-echo "calcul du tableau des suffixe homo sapiens 14"
-echo "$(./bioseq.native suffix-array-10 homo_sapiens_14.fasta)"
+# echo "------------------------------"
+# echo "calcul du tableau des suffixe homo sapiens 14"
+# echo "$(./bioseq.native suffix-array-10 homo_sapiens_14.fasta)"
 
-echo "calcul de la bwt de homo sapiens 14"
-echo "$(./bioseq.native bwt-10 homo_sapiens_14.fasta)"
+# echo "calcul de la bwt de homo sapiens 14"
+# echo "$(./bioseq.native bwt-10 homo_sapiens_14.fasta)"
 
 
